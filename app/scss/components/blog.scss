@@ -1,0 +1,174 @@
+@use '../utils/' as *;
+
+.header{
+        height: rem(500);
+        text-align: center;    
+        &__img{
+        background-image:  linear-gradient(rgba(197, 184, 184, 0.416), rgba(255,255,255,0.9)), url(../images/img_blog/blog__bg.webp);
+        width: 100%;
+        height: rem(500);
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+    }
+
+    &__text{
+        z-index: 1;
+        position: relative;
+        top: rem(132.5);
+        padding-left: 10%;
+        padding-right: 10%;
+        color: #222;
+        text-transform: uppercase;
+        h2{
+            font-size: rem(55);
+            margin-bottom: rem(60);
+            font-weight: 300;
+            @include breakpoint-down(large){font-size: 2rem;
+                margin-bottom: 1.75rem;}
+            @include breakpoint-down(extramedium){
+                font-size: rem(23.2);
+                margin-bottom: 1rem;
+            }
+            @include breakpoint-down(extrasmall){font-size: rem(18);
+            margin-bottom: rem(0);}
+        }
+        p{
+            font-size: rem(24);
+            line-height: rem(28);
+            letter-spacing: 0.02em;
+            margin-top: rem(20) !important;
+            font-weight: 600;
+            padding: 0 15%;
+            @include breakpoint-down(large){font-size: 1rem;}
+            @include breakpoint-down(extramedium){font-size: 0.58rem;margin-top: 0 !important;}
+        }
+    }
+}
+
+.blog1{
+    padding-top: rem(10);
+    .containt{
+        margin: 0 6.25rem;
+        @include breakpoint-down(tablet){
+            margin: 0 auto;
+        }
+    }
+    &__angle{
+        border-color: transparent transparent var(--white);
+        border-width: 0px 0px 60px 1349px;
+        // border-style: solid;
+        top: rem(-60.48);
+        position: relative;
+        
+    }
+
+    &__elt{
+        padding-top: rem(10);
+        &_bloc1{
+            margin-bottom: rem(50);
+            @include breakpoint-down(xsmall) {
+                width: rem(720);
+                }
+        }
+    }
+}
+
+.bloc__desc{
+    padding: rem(0) rem(7) rem(20) rem(7);
+
+    h1{
+        font-size: rem(34);    
+        margin-bottom: rem(8);
+        font-family: "Lato";
+        font-weight: normal;
+        line-height: rem(42);
+        letter-spacing: rem(-2); 
+        a{color: var(--gray-dark-1);
+        transition: color 0.2s ease-out;}
+        @include breakpoint-down(tablet){
+            font-size: rem(24); 
+            margin-bottom: rem(4); 
+            line-height: rem(21);  
+        }
+    }
+    p{
+        color: var(--gray-dark-2);
+        background: hsl(0, 0%, 95%);
+        padding: rem(8) rem(10);
+        border-radius: rem(7);
+        font-size: rem(13);
+        text-transform: uppercase;
+        letter-spacing: rem(2);
+        font-weight: 600;
+        margin-top: rem(15);
+        margin-bottom: rem(20);
+
+        a{color: var(--primary);
+            font-weight: 400;
+            text-decoration: underline;
+
+            &:hover{
+                color: var(--gray-dark-1);
+            }
+        }
+    }
+    span{
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+}
+
+.blog1__elt_bloc2{
+
+    .bloc__list{
+    margin: 0 rem(10);
+
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        li{
+            margin-bottom: rem(10);
+            padding: rem(15);
+            background: hsl(0, 0%, 95%);
+            border: none;
+            cursor: pointer;
+            font-size: rem(16);
+            
+            &:hover{
+                a{
+                color: var(--gray-dark-1);
+                }
+            }
+            a{
+                font-weight: 400;
+                text-decoration: underline;
+                padding-left: 5px;
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+.btn_blog{
+    margin: rem(10) 0;
+
+    button{
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 13px;
+    background: var(--cyan);
+    color: var(--white);
+    border-radius: rem(3);
+    letter-spacing: rem(3);
+    font-size: rem(14);
+    font-weight: 800;
+    border: none;
+
+    &:hover{
+        text-decoration: underline;
+    }
+    }
+}
+
